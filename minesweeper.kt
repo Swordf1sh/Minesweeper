@@ -1,7 +1,5 @@
 package minesweeper
 
-import kotlin.random.Random
-
 class MineSweeper (var mines: Int) {
     val mineFieldHidden = MutableList(9) {MutableList(9) {"."}}
     val mineFieldTemp = (List(81-mines) {"."} + List(mines) {"X"}).shuffled().chunked(9)
